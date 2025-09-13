@@ -1,0 +1,70 @@
+:root{
+  --bg:#0b1220;
+  --card:#0f172a;
+  --muted:#94a3b8;
+  --text:#e5e7eb;
+  --brand:#60a5fa;
+  --line:#1f2937;
+  --ring:#3b82f6;
+  --radius:16px;
+  --container:1100px;
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+}
+
+html,body{background:var(--bg);color:var(--text);font:400 16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial}
+.container{max-width:var(--container);margin-inline:auto;padding-inline:20px}
+.site-header{background:linear-gradient(180deg,#0e1628,#0b1220);border-bottom:1px solid var(--line)}
+.site-title{font-size:28px;font-weight:700;letter-spacing:.3px}
+.site-subtitle{color:var(--muted)}
+.site-header .container{padding:28px 20px}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:22px;
+  padding-block:26px;
+}
+
+.cv-card{
+  grid-column:span 12;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.cv-card:hover{ transform:translateY(-2px); box-shadow:0 10px 26px rgba(0,0,0,.45); }
+
+@media (min-width: 900px){
+  .cv-card{ grid-column:span 4; }
+}
+
+.cv-header{display:flex;gap:16px;align-items:center;margin-bottom:12px}
+.avatar{width:80px;height:80px;border-radius:50%;border:2px solid #1f2937}
+.cv-header h2{font-size:22px;margin-bottom:2px}
+.role{color:var(--brand);font-weight:600}
+.contact{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:14px}
+.contact a{color:var(--text);text-decoration:underline dotted}
+
+h3{font-size:16px;margin:14px 0 8px;color:#93c5fd;letter-spacing:.2px}
+.two-col{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:700px){ .two-col{ grid-template-columns:1.2fr .8fr; } }
+
+.timeline li{position:relative;padding-left:14px;margin-bottom:10px}
+.timeline li::before{
+  content:"";
+  position:absolute;left:0;top:.55em;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--brand);
+}
+
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags li{
+  padding:6px 10px;border-radius:999px;
+  border:1px solid var(--line);background:#0b1326; font-size:13px;color:#cbd5e1
+}
+
+.site-footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);text-align:center}
+a{color:var(--brand)}
+a:focus-visible, .cv-card:focus-within{outline:2px solid var(--ring);outline-offset:2px}
