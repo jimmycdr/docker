@@ -1,17 +1,24 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Proyecto Final - Docker</title>
+  <title>CV – Equipo</title>
   <link rel="preload" href="assets/css/reset.css" as="style" />
   <link rel="stylesheet" href="assets/css/reset.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Currículum</h1>
+    <div class="container header-bar">
+      <div>
+        <h1 class="site-title">Currículum</h1>
+      </div>
+
+      <div class="actions">
+        <button id="themeToggle" class="btn" aria-pressed="false" title="Cambiar tema">🌗 Tema</button>
+        <button id="printBtn" class="btn" title="Descargar PDF">⬇︎ PDF</button>
+      </div>
     </div>
   </header>
 
@@ -19,7 +26,7 @@
     <!-- CV 1 -->
     <article class="cv-card">
       <header class="cv-header">
-        <img class="avatar" src="https://placehold.co/160x160/png" alt="Avatar de Jhimmy Cedeño" />
+        <img class="avatar" src="https://placehold.co/160x160/png" alt="Avatar de Jimmy Cedeño" />
         <div>
           <h2>Jhimmy Cedeño</h2>
           <p class="role">Frontend Developer · Angular | TS</p>
@@ -154,5 +161,7 @@
       <small>© 2025 Equipo · Hecho con HTML + CSS</small>
     </div>
   </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
